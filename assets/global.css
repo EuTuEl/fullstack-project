@@ -1,0 +1,124 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/*form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*button {*/
+/*    margin: 10px;*/
+/*    padding: 10px;*/
+/*    color: white;*/
+/*    background-color: dodgerblue;*/
+/*    border-style: none;*/
+/*    border-radius: 10px;*/
+/*    width: fit-content;*/
+/*    max-width: 100px;*/
+/*}*/
+
+/*button:hover {*/
+/*    border-width: 5px;*/
+/*    border-style: solid;*/
+/*    border-color: #241f22;*/
+/*}*/
+
+/*#nav {*/
+/*    height: 70px;*/
+/*    width: 100%;*/
+/*    background-color: dodgerblue;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-around;*/
+/*}*/
+
+/*#nav div {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*#nav a {*/
+/*    color: white;*/
+/*    margin: 10px;*/
+/*}*/
+
+/*#post-list {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*}*/
+
+/*.post-item {*/
+/*    position: relative;*/
+/*    margin: 20px;*/
+/*    border-style: ridge;*/
+/*    border-color: aliceblue;*/
+/*    background-color: #f7f5f5;*/
+/*    padding: 3px;*/
+/*    max-width: 250px;*/
+/*}*/
+
+/*.post-item img {*/
+/*    width: 250px;*/
+/*}*/
+
+/*.post-item h2, .post-item p {*/
+/*    margin: 2px;*/
+/*}*/
+
+/*.post-item .price-h2 {*/
+/*    margin: 10px;*/
+/*    color: dodgerblue;*/
+/*}*/
+
+/*.post-item:hover{*/
+/*    border-width: 5px;*/
+/*    border-color: dodgerblue;*/
+/*    border-style: ridge;*/
+/*}*/
+
+/*.post-item:hover .extra-detail {*/
+/*    display: block;*/
+/*}*/
+
+/*.post-item .extra-detail {*/
+/*    display: none;*/
+/*}*/
+
+/*.form-input {*/
+/*    border-radius: 10px;*/
+/*    border-style: solid;*/
+/*}*/
+
+/*.good-input {*/
+/*    border-color: greenyellow;*/
+/*}*/
+
+/*.bad-input {*/
+/*    border-color: red;*/
+/*}*/
+
+/*.delete-btn {*/
+/*    border-color: darkred;*/
+/*    position: relative;*/
+/*    left: 65%;*/
+/*    background-color: darkred;*/
+/*}*/
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none;
+}
