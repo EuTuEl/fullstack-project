@@ -1,0 +1,58 @@
+http://localhost/test-api/api/index.php/get
+
+request: method = GET
+
+response: array of objects
+
+
+http://localhost/test-api/api/index.php/post
+
+request:
+method = POST
+data: {
+    "payload" : {
+        "brand" :
+        "model" :
+        "year" :
+        "price" :
+        "engine" :
+        "fuel" :
+        "power" :
+        "image" :
+        "description" :
+    },
+    "userID" : ,
+    "token" :
+}
+
+response:
+data: {
+    "fields" : {(inserted fields)}
+    "byUser" : (username)
+}
+
+
+
+
+
+
+
+http://localhost/test-api/api/index.php/delete
+
+http://localhost/test-api/api/index.php/register
+
+http://localhost/test-api/api/index.php/login
+
+
+
+
+["brand" => $args[], => $args["model"], => $args["year"], => $args["price"],
+                => $args["engine"], => $args["fuel"], => $args["power"], => $args["image"], => $args["description"]]);
+
+
+
+
+
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NywidXNlcm5hbWUiOiJyYWRhciIsInNlc3Npb25faWQiOiJpdmtkMGRhaDQydXFyYm1oNzgybWczcXVwZiJ9.GgO50s4Fjk568QphunkJlp-9UvJSyKqdSbfgPFzJCw0
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NywidXNlcm5hbWUiOiJyYWRhciIsInNlc3Npb25faWQiOiJzMW1oZ3RvY2oxdm1pdDQwdGNrYnRjYjAyYyJ9.orkST6a-SykxAw_sL1xmd0hV8pWM2v7okDCnfO_1bcQ
