@@ -7,18 +7,29 @@ use \Firebase\JWT\JWT;
 class Control {
     public static function initSession(): void
     {
+//        session_set_cookie_params(10);
+        session_name("mysession");
+        setcookie(session_name(), session_id(), 60, '/');
         session_start();
         if (!isset($_SESSION["jwt"])) {
+//            ini_set('session.use_only_cookies', 1);
+//            setcookie(session_name(), session_id(), time() + 60, '/');
             $_SESSION["jwt"] = "123default123";
             $_SESSION["username"] = "123default123";
         }
     }
 
-    private static function updateSession(string $jwt, string $username): void
+    private static function updateSession(string $username, int $userId): array
     {
+//        setcookie(session_name(), session_id(), time() + 60, '/');
+//        session_start();
         session_regenerate_id();
+        setcookie(session_name(), session_id(), time() + 60, '/');
+        $jwt = self::generateJWT($userId, $username);
         $_SESSION["jwt"] = $jwt;
         $_SESSION["username"] = $username;
+
+        return ["jwt" => $jwt, "username" => $username];
     }
 
     private static function generateJWT(int $id, string $username): string
@@ -185,14 +196,14 @@ class Control {
         $loginSuccess = password_verify($password, $storedPassword);
 
         if ($loginSuccess) {
-            $jwt = self::generateJWT($searchResult->id, $searchResult->username);
-            self::updateSession($jwt, $searchResult->username);
+//            $jwt = self::generateJWT($searchResult->id, $searchResult->username);
+            $sessionItems = self::updateSession($searchResult->username, $searchResult->id);
 
             return [
                 "code" => 200,
                 "success" => true,
                 "error" => "",
-                "body" => ["jwt" => $jwt, "username" => $searchResult->username]
+                "body" => ["jwt" => $sessionItems["jwt"], "username" => $sessionItems["username"]]
             ];
         } else {
             return [
